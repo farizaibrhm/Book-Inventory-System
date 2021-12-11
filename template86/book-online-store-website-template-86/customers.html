@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Category | Bookstore Inventory Management System</title>   
+		<title>Customers | Bookstore Inventory Management System</title>   
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
@@ -23,9 +23,8 @@
             }
 
             .nav-tabs .nav-link.active {
-              background-color: #F4F4F4;
-            }
-
+            background-color: #F4F4F4;
+        }
         
         </style>
 	</head>
@@ -60,13 +59,13 @@
 
 						<li><a href="books.html">Books</a></li>
 
-						<li><a href="category.html" class="active">Category</a></li>
+						<li><a href="category.html">Category</a></li>
 
 						<li><a href="suppliers.html">Suppliers</a></li>
 
-            <li><a href="customers.html">Customers</a></li>
-            
-            <li><a href="orders.html">Orders</a></li>
+						<li><a href="customers.html"  class="active">Customers</a></li>
+
+						<li><a href="orders.html">Orders</a></li>
 
                         <li>
 							<a href="#" class="dropdown-toggle">Account</a>
@@ -83,7 +82,7 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Category</h1>
+							<h1>Customers</h1>
 
                             <!-- Tabs navs -->
                             <ul class="nav nav-tabs mb-3">
@@ -91,11 +90,18 @@
                                 <a
                                     class="nav-link active"
                                     data-bs-toggle="tab"
-                                    href="#add-category"
-                                    >Book Category</a
+                                    href="#new-customer"
+                                    >New Customer</a
                                 >
                                 </li>
-                                
+                                <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    data-bs-toggle="tab"
+                                    href="#list-customers"
+                                    >List of Customers</a
+                                >
+                                </li>
                             </ul>
                             <!-- Tabs navs -->
                             
@@ -103,171 +109,107 @@
                             <div class="tab-content">
                                 <div
                                 class="tab-pane fade show active"
-                                id="add-category">
+                                id="new-customer">
 
                                 <div class="bkstr-form">
                                   <form class="form-horizontal">
-                                    
-
-                                    <div class="form-row align-items-center">
-                                      <div class="col-sm-8 my-1">
-                                        
-                                        <input type="input" class="form-control" name="add_category" placeholder="Add new book category"> 
+                                    <div class="form-group">
+                                      <label class="control-label col-sm-4">Customer ID:</label>
+                                      <div class="col-sm-12">
+                                        <input type="text" class="form-control" name="customer_ID" placeholder="5" readonly> <!--auto generated-->
                                       </div>
-
-                                    <div class="col-auto my-1">
-                                      <button type="submit" class="btn btn-primary" name="add">ADD</button>
+                                    </div>
+                    
+                                  <div class="form-group">
+                                    <label class="control-label col-sm-4">Full Name:</label>
+                                    <div class="col-sm-12">
+                                      <input type="text" class="form-control"name="customer_Name">
                                     </div>
                                   </div>
 
-                                  <br>
-                                          
-                                          <table class="table table-bordered table-hover">
-                                    <thead class="thead-dark">
-                                      <tr>
-                                        <th class="text-center" scope="col">ID</th>
-                                        <th class="text-center" scope="col">Category</th>
-                                        <th class="text-center" scope="col">No. Of Books</th>
-                                        <th class="text-center" scope="col">Action</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <th class="text-center" scope="row">1</th>
-                                        <td align="center">Accounting and Finance</td>
-                                        <td align="center">15</td>
-                                        <td align="center" class="col-2">
-                                            <a class="edit editbtn" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-    
-                                            <a class="delete" name="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                            </td>
-                                      </tr>
-                                      <tr>
-                                        <th class="text-center" scope="row">2</th>
-                                        <td align="center"> Business and Economics </td>
-                                        <td align="center"> 23 </td>
-                                        <td align="center" class="col-2">
-                                            <a class="edit editbtn" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-    
-                                            <a class="delete" name="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                            </td>
-                                      </tr>
-                                      <tr>
-                                        <th class="text-center" scope="row">3</th>
-                                        <td align="center"> Computing and internet</td>
-                                        <td align="center">39</td>
-                                        <td align="center" class="col-2">
-                                            <a class="edit editbtn" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-    
-                                            <a class="delete" name="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                            </td>
-                                      </tr>
-                                      <tr>
-                                        <th class="text-center" scope="row">4</th>
-                                        <td align="center"> Engineering </td>
-                                        <td align="center">21</td>
-                                        <td align="center" class="col-2">
-                                            <a class="edit editbtn" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-    
-                                            <a class="delete" name="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                            </td>
-                                      </tr>
-                                           <tr>
-                                        <th class="text-center" scope="row">5</th>
-                                        <td align="center"> Health and Medicines </td>
-                                        <td align="center">33</td>
-                                        <td align="center" class="col-2">
-                                            <a class="edit editbtn" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-    
-                                            <a class="delete" name="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                            </td>
-                                      </tr>
-                                           <tr>
-                                        <th class="text-center" scope="row">6</th>
-                                        <td align="center"> Accounting and Finance </td>
-                                        <td align="center">19</td>
-                                        <td align="center" class="col-2">
-                                            <a class="edit editbtn" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-    
-                                            <a class="delete" name="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                            </td>
-                                      </tr>
-                                           <tr>
-                                        <th class="text-center" scope="row">7</th>
-                                        <td align="center"> Architecture </td>
-                                        <td align="center">19</td>
-                                        <td align="center" class="col-2">
-                                            <a class="edit editbtn" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-    
-                                            <a class="delete" name="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                            </td>
-                                      </tr>
-                                           <tr>
-                                        <th class="text-center" scope="row">8</th>
-                                        <td align="center"> Arts </td>
-                                        <td align="center">40</td>
-                                        <td align="center" class="col-2">
-                                            <a class="edit editbtn" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-    
-                                            <a class="delete" name="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                            </td>
-                                      </tr>
-                                           <tr>
-                                        <th class="text-center" scope="row">9</th>
-                                        <td align="center"> Politics </td>
-                                        <td align="center">16</td>
-                                        <td align="center" class="col-2">
-                                            <a class="edit editbtn" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-    
-                                            <a class="delete" name="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                            </td>
-                                      </tr>
-                                           <tr>
-                                        <th class="text-center" scope="row">10</th>
-                                        <td align="center"> Business Administration </td>
-                                        <td align="center">23</td>
-                                        <td align="center" class="col-2">
-                                            <a class="edit editbtn" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-    
-                                            <a class="delete" name="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                            </td>
-                                      </tr>
-                                           <tr>
-                                        <th class="text-center" scope="row">11</th>
-                                        <td align="center"> Mass Communication </td>
-                                        <td align="center">22</td>
-                                        <td align="center" class="col-2">
-                                            <a class="edit editbtn" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-    
-                                            <a class="delete" name="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                            </td>
-                                      </tr>
-                                           <tr>
-                                        <th class="text-center" scope="row">12</th>
-                                        <td align="center"> Sport Science </td>
-                                        <td align="center">25</td>
-                                        <td align="center" class="col-2">
-                                            <a class="edit editbtn" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-    
-                                            <a class="delete" name="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                            </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                          
-                                    
-                                            
-                                          
-                                      </div>
+                                  <div class="form-group">
+                                    <label class="control-label col-sm-4">Phone Number:</label>
+                                    <div class="col-sm-12">
+                                      <input type="text" class="form-control"  name="customer_PhoneNo">
                                     </div>
-                                      
-                                        
+                                  </div>
+                                  
+                                  <div class="form-group">
+                                    <label class="control-label col-sm-4">Email:</label>
+                                    <div class="col-sm-12">
+                                      <input type="email" class="form-control" name="customer_Email">
+                                    </div>
+                                  </div>
+                
+            
+                         <button type="submit" class="btn btn-primary btn-block mb-4" name="update" >SUBMIT</button>
                     
                             </form>
                                 </div>
-                                
                                 </div>
 
+                                <div class="tab-pane fade" id="list-customers">
+                                    
+                                    <table class="table table-bordered table-hover">
+                                        <thead class="thead-dark">
+                                          <tr>
+                                            <th class="text-center" scope="col">ID</th>
+                                            <th class="text-center" scope="col">Name</th>
+                                            <th class="text-center" scope="col">Phone Number</th>
+                                            <th class="text-center" scope="col">Email</th>
+                                            <th class="text-center" scope="col">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th class="text-center" scope="row">1</th>
+                                            <td align="center">Kalsum binti Said</td>
+                                            <td align="center">019-6678144</td>
+                                            <td align="center">kalsumsaid@gmail.com</td>
+                                            <td align="center" class="col-2">
+                                                <a class="edit editbtn" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+        
+                                                <a class="delete" name="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                            <th class="text-center" scope="row">2</th>
+                                            <td align="center">Jacob Tan</td>
+                                            <td align="center">013-7774534</td>
+                                            <td align="center">jacobtan@gmail.com</td>
+                                            <td align="center" class="col-2">
+                                                <a class="edit editbtn" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+        
+                                                <a class="delete" name="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                            <th class="text-center" scope="row">3</th>
+                                            <td align="center">Baktiar bin Zain</td>
+                                            <td align="center">013-8908534</td>
+                                            <td align="center">baktiarzain@gmail.com</td>
+                                            <td align="center" class="col-2">
+                                                <a class="edit editbtn" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+        
+                                                <a class="delete" name="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                            <th class="text-center" scope="row">4</th>
+                                            <td align="center">Natrah A/P Ravindran</td>
+                                            <td align="center">019-8971884</td>
+                                            <td align="center">natrahravindran@gmail.com</td>
+                                            <td align="center" class="col-2">
+                                                <a class="edit editbtn" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+        
+                                                <a class="delete" name="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                                </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+        
+                                    
+                                </div>
                             </div>
                             <!-- Tabs content -->
 
